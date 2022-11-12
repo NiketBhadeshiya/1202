@@ -30,7 +30,7 @@ body {
 #header {
     width: 100%;
     height:100vh;
-    background: url("https://niketbhadeshiya.github.io/1202/images/lap32.jpg") center/cover no-repeat ;
+    background: url("/images/lap32.jpg") center/cover no-repeat ;
 }
 
 .container {
@@ -81,7 +81,12 @@ nav ul li a:hover::after {
 
 .header-text {
     margin-top: 20%;
-    font-size: 30px;
+    font-size: 35px;
+}
+
+.header-text a {
+    font-family: 'Montserrat Alternates';
+    text-decoration: none;
 }
 
 .header-text h1 {
@@ -117,13 +122,34 @@ nav ul li a:hover::after {
 }
 
 .subtitle {
+    width: fit-content;
     font-size: 60px;
     font-weight: 600;
 }
 
+.subtitle::after{
+    content: '';
+    width: 195px;
+    height: 4px;
+    background-color: #ff004f;
+    position: absolute;
+    /* left: 630px; */
+    border-radius: 5px;
+    /* bottom: -175px; */
+    transition: 0.5s;
+}
+
+.subtitle:hover::after {
+    width: 270px;
+}
+
+.about-col-2 p {
+    margin-top: 20px;
+}
+
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    margin: 0px 0 40px;
 }
 
 .tab-links {
@@ -171,6 +197,8 @@ nav ul li a:hover::after {
     display: block;
 }
 
+/* ---------------------------------Services */
+
 #services {
     padding: 30px 0;
 }
@@ -182,16 +210,118 @@ nav ul li a:hover::after {
     margin-top: 50px;
 }
 
+.services-list div {
+    /* border:2px solid #b54769; */
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.services-list div i{
+    font-size: 32px;
+    color: #ff004f;
+    margin: 30px 0;
+}
+
+.services-list h2{
+    margin: 10px 0;
+}
+
+.services-list a{
+    margin-bottom: 30px;
+    text-decoration: none;
+    color:#ababab;
+}
+
+.services-list div .fas{
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.services-list div:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+/* .services-list div:hover {
+    color: black;
+    background-color: whitesmoke;
+    animation-name: serviceEffect;
+    animation-duration: 0.25s;
+} */
+
+/* @keyframes serviceEffect {
+    from {background-color:whitesmoke;height: 0px;}
+    to {background-color: whitesmoke;height: 240px;}
+} */
+
+/* ------------------- Contact  */
+#contact{
+    background-color: #ff004f;
+    padding: 30px 0;
+}
+
+.contactSubtitle {
+    font-size: 32px;
+    /* border: 2px solid red; */
+    margin:20px 0;
+}
+
+.contactSubtitle::after {
+    content: '';
+    width: 200px;
+    height: 5px;
+    background-color:#080808;
+    border-radius: 5px;
+    position: absolute;
+    /* left: 0; */
+    /* bottom: -6px; */
+    transition: 0.5s;
+}
+.contact-box {
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.contact-box i {
+    color: #080808;
+    font-size: 25px;
+    margin-right: 7px;
+}
+.contact-box a {
+    text-decoration: none;
+    color: white;
+}
+.contact-box a:hover {
+    color: #080808;
+}
+
+.contactfromMedia {
+    align-items: center;
+}
+
+.contactfromMedia i{
+    font-size: 40px;
+    margin-right: 16px;
+    color: #080808;
+}
+
+.contactfromMedia i:hover{
+    color: white;
+}
+
+
 /* ----------- css for small screen */
 
 nav .fas {
     display: none;
 }
 
-@media only screen and (max-width : 600px){
-    #header {
-        /* background-image: ; */
-    }
+@media only screen and (max-width : 800px){
+    /* #header {
+        background-image: ;
+    } */
 
     .header-text {
         margin-top: 40%;
@@ -252,5 +382,38 @@ nav .fas {
         font-size: 16px;
         margin-right: 20px;
     }    
+
+    .contactSubtitle {
+        font-size: 28px;
+    }
+
+    .contactSubtitle::after {
+        content: '';
+        width: 170px;
+        height: 3px;
+        background-color:#080808;
+        border-radius: 5px;
+        position: absolute;
+        /* left: 0; */
+        /* bottom: -6px; */
+        transition: 0.5s;
+    }
+
+    .contact-box i {
+        font-size: 20px;
+    }
+
+    .contact-box a{
+        font-size: 14px;
+    }
+
+    .contactP {
+        font-size: 15px;
+    }
+
+    .contactfromMedia i{
+        font-size: 28px;
+        margin-right: 10px;
+    }
 
 }
